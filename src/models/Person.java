@@ -1,6 +1,10 @@
 package models;
 
-public class Person {
+public class Person implements Payable, Comparable<Person> {
+    @Override
+    public int compareTo(Person other) {
+        return Double.compare(getPaymentAmount(), other.getPaymentAmount());
+    }
     private static int idCounter = 1;
     private int id;
     private String name;
@@ -36,6 +40,16 @@ public class Person {
     @Override
     public String toString() {
         return id + ", " + name + ", " + surname;
+    }
+
+    @Override
+    public double getPaymentAmount() {
+        return 0;
+    }
+
+    @Override
+    public String getPosition() {
+        return "unemployed";
     }
 
 
