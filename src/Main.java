@@ -16,7 +16,7 @@ public class Main {
         people.add(new Employee("Make", "Sakenuly", "Manager", 50000));
         people.add(new Employee("Zhanna", "Zhakypkyzy", "Singer", 45000));
 
-        // Sort using a custom comparator based on payment amount
+        
         Collections.sort(people, new Comparator<Payable>() {
             @Override
             public int compare(Payable o1, Payable o2) {
